@@ -9,12 +9,18 @@ Giai đoạn này sẽ thực hiện:
 * Nhận mã nguồn
 * Xóa bỏ tất cả chú thích, comments của chương trình
 * Chỉ thị tiền xử lý (bắt đầu bằng #) cũng được xử lý như: #include, #define,...
+
+*Cú pháp thực hiện quá trình từ file .c sang .i trong terminal: gcc -E main.c -o main.i*
 ## 2. Giai đoạn Dịch ngôn ngữ bậc cao sang ngôn ngữ Assembly – Compiler
 * Phân tích cú pháp (syntax) của mã nguồn ngôn ngữ bậc cao
 * Chuyển chúng sang dạng mã Assembly là một ngôn ngữ bậc thấp (hợp ngữ) gần với tập lệnh của bộ vi xử lý.
+
+*Cú pháp thực hiện quá trình từ file .i sang .s trong terminal: gcc main.i -S -o main.s*
 ## 3. Giai đoạn Assembler
 * Dich chương trình => Sang mã máy 0 và 1
 * Một tệp mã máy (.o) sinh ra trong hệ thống sau đó.
+
+*Cú pháp thực hiện quá trình từ file .s sang .o trong terminal: gcc -c main.s -o main.o*
 ## 4. Giai đoạn Dịch ngôn ngữ bậc cao sang ngôn ngữ Assembly – Compiler
 * Trong giai đoạn này mã máy của một chương trình dịch từ nhiều nguồn (file .c hoặc file thư viện .lib) được liên kết lại với nhau để tạo thành chương trình đích duy nhất
 * Mã máy của các hàm thư viện gọi trong chương trình cũng được đưa vào chương trình cuối trong giai đoạn này.
