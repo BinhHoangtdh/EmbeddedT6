@@ -21,6 +21,6 @@ Giai đoạn này sẽ thực hiện:
 * Một tệp mã máy (.o) sinh ra trong hệ thống sau đó.
 
 *Cú pháp thực hiện quá trình từ file .s sang .o trong terminal: gcc -c main.s -o main.o*
-## 4. Giai đoạn Dịch ngôn ngữ bậc cao sang ngôn ngữ Assembly – Compiler
+## 4. Giai đoạn liên kết các object file – Linker
 * Trong giai đoạn này mã máy của một chương trình dịch từ nhiều nguồn (file .c hoặc file thư viện .lib) được liên kết lại với nhau để tạo thành chương trình đích duy nhất
 * Mã máy của các hàm thư viện gọi trong chương trình cũng được đưa vào chương trình cuối trong giai đoạn này.
