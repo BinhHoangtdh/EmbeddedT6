@@ -30,22 +30,29 @@ Con trỏ trong C cũng chỉ là biến, cũng có thể khai báo, khởi tạ
 * Kiểu dữ liệu của con trỏ: Kiểu dữ liệu của con trỏ trùng với kiểu dữ liệu tại vùng nhớ mà nó trỏ đến.
 * Giá trị của con trỏ: chứa địa chỉ vùng nhớ mà con trỏ trỏ đến.
 
-`Ví dụ: biến "tuổi" (int tuoi) và biến con trỏ "pointerTuoi" (int *pointerTuoi = &tuoi) trỏ đến biến "tuoi"`
+Ví dụ: biến "tuổi" (int tuoi) và biến con trỏ "pointerTuoi" (int *pointerTuoi = &tuoi) trỏ đến biến "tuoi"
 <p align="center">
   <img src="https://github.com/BinhHoangtdh/EmbeddedT6/assets/90816265/ff3f1827-a509-4cb8-aebc-75d459550ac2">
 </p>
 
 ## 2. Khai báo con trỏ
-* Khai báo con trỏ biến: <kiểu dữ liệu> * <tên biến con trỏ>;
+### Khai báo con trỏ biến: 
+
+`<kiểu dữ liệu> * <tên biến con trỏ>;`
 
 `Ví dụ: int *pointer = NULL;`
   * Kiểu dữ liệu có thể là: int, char, void, double,.... **Lưu ý: con trỏ kiểu void có thể trỏ đến các vùng nhớ kiểu dữ liệu khác nhau nhưng khi dùng con trỏ kiểu "void" để truy xuất giá trị thì phải ép kiểu con trỏ để lấy giá trị của vùng nhớ mà con trỏ trỏ đến.**
   * Dấu * trước tên biến là ký hiệu báo cho trình biên dịch biết ta đang khai báo con trỏ.
 
 **Lưu ý: Khi khai báo con trỏ thì phải gán địa chỉ cho nó. Nếu chưa dùng đến thì gán con trỏ NULL cho nó.**
-* Khai báo con trỏ hàm: Khi khai báo con trỏ đến hàm thì phải đúng các cấu trúc, Input Para của hàm đó
+### Khai báo con trỏ hàm: 
+
+Khi khai báo con trỏ đến hàm thì phải đúng các cấu trúc, Input Para của hàm đó
+
+`Cú pháp: <Kiểu trả về> (*pointer)(Tham số đầu vào);`
 
 `Ví dụ: Cho hàm tổng 2 số nguyên sau:`
+
 <p align="center">
   <img src="https://github.com/BinhHoangtdh/EmbeddedT6/assets/90816265/71c169a0-50b0-420b-bac3-d41a4440bf24">
 </p>
@@ -57,7 +64,7 @@ Ta khai báo con trỏ ptr hàm dạng như sau:
 
 ## 3. Ép kiểu con trỏ
 
-* Ép kiểu sang con trỏ biến
+### Ép kiểu sang con trỏ biến
 
 Cú pháp: (<kiểu dữ liệu> *)<tên con trỏ>
 
@@ -71,7 +78,7 @@ Ví dụ:
 
 `Printf("Gia tri cua i la: %d\n", *(int *)pointer); // Ép kiểu pointer sang int để lấy giá trị của i`
 
-* Ép kiểu sang con trỏ hàm
+### Ép kiểu sang con trỏ hàm
 
 Ví dụ: 
 <p align="center">
