@@ -82,7 +82,10 @@ Ví dụ:
   <img src="https://github.com/BinhHoangtdh/EmbeddedT6/assets/90816265/643eb753-98bf-4c3e-94d9-a0a1429d68ab">
 </p>
 
+## 4. Pointer to Pointer
 
-## 4. Kích thước con trỏ
+`int *ptr = NUll;`
+`int **ptp = &ptr; // ptp chứa địa chỉ của ptr`
+## 5. Kích thước con trỏ
 
 Kích thươc con trỏ phụ thuộc vào kiến trúc của vi xử lý.
