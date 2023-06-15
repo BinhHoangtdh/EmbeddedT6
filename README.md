@@ -92,6 +92,7 @@ Ví dụ:
 ## 4. Pointer to Pointer
 
 `int *ptr = NUll;`
+
 `int **ptp = &ptr; // ptp chứa địa chỉ của ptr`
 ## 5. Kích thước con trỏ
 
@@ -108,12 +109,38 @@ Kích thươc con trỏ phụ thuộc vào kiến trúc của vi xử lý.
 
 – Chứa khai báo hằng số trong chương trình (.rodata)
 
+Ví dụ:
+
+`#include <stdio.h>`
+
+`const int i = 10; // text segment`
+
+`int main(int argc, char const * argv[]){`
 ## 2. Data (Initialized Data)
 
 – Quyền truy cập là read-write.
 – Chứa biến toàn cục or biến static với giá trị khởi tạo khác không.
 – Được giải phóng khi kết thúc chương trình.
 
+Ví dụ:
+
+`#include <stdio.h>`
+
+`int k = 10; // Data segment`
+
+`static int i = 5; // Data segment`
+
+`void tong(){`
+
+    `static int i= 2; // Data segment`
+   
+`}`
+
+`int main(int argc, char const * argv[]){`
+
+    `return 0;`
+   
+`}`
 ## 3. BSS (Uninitialized Data)
 
 – Quyền truy cập là read-write.
@@ -121,6 +148,26 @@ Kích thươc con trỏ phụ thuộc vào kiến trúc của vi xử lý.
 – Chứa biến toàn cục or biến static với giá trị khởi tạo bằng không or không khởi tạo.
 
 – Được giải phóng khi kết thúc chương trình.
+
+Ví dụ:
+
+`#include <stdio.h>`
+
+    `int k ; // bss segment`
+
+    `static int i ; // bss segment`
+
+`void tong(){`
+
+   `static int i; // bss segment`
+   
+`}`
+
+`int main(int argc, char const * argv[]){`
+
+    `return 0;`
+   
+`}`
 ## 4. Stack
 
 – Quyền truy cập là read-write.
@@ -129,6 +176,23 @@ Kích thươc con trỏ phụ thuộc vào kiến trúc của vi xử lý.
 
 – Sẽ được giải phóng khi ra khỏi block code/hàm
 
+Ví dụ: 
+
+`#include <stdio.h>`
+
+`void tong(){`
+
+    `int i; // stack segment`
+   
+`}`
+
+`int main(int argc, char const * argv[]){`
+
+    `int count = 1;`// stack segment
+
+    `return 0;`
+
+`}`
 ## 5. Heap
 
 – Quyền truy cập là read-write.
