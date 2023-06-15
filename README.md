@@ -132,13 +132,13 @@ Ví dụ:
 
 `void tong(){`
 
-    `static int i= 2; // Data segment`
+`static int i= 2; // Data segment`
    
 `}`
 
 `int main(int argc, char const * argv[]){`
 
-    `return 0;`
+`return 0;`
    
 `}`
 ## 3. BSS (Uninitialized Data)
@@ -153,19 +153,19 @@ Ví dụ:
 
 `#include <stdio.h>`
 
-    `int k ; // bss segment`
+`int k ; // bss segment`
 
-    `static int i ; // bss segment`
+`static int i ; // bss segment`
 
 `void tong(){`
 
-   `static int i; // bss segment`
+`static int i; // bss segment`
    
 `}`
 
 `int main(int argc, char const * argv[]){`
 
-    `return 0;`
+`return 0;`
    
 `}`
 ## 4. Stack
@@ -182,15 +182,15 @@ Ví dụ:
 
 `void tong(){`
 
-    `int i; // stack segment`
+`int i; // stack segment`
    
 `}`
 
 `int main(int argc, char const * argv[]){`
 
-    `int count = 1;`// stack segment
+`int count = 1;// stack segment`
 
-    `return 0;`
+`return 0;`
 
 `}`
 ## 5. Heap
@@ -202,3 +202,19 @@ Ví dụ:
 – Sẽ được giải phóng khi gọi hàm free,…
 
 **Lưu ý: Khi sử dụng lệnh cấp phát bộ nhớ động thì sau khi dùng xong thì phải giải phóng bộ nhớ bằng lệnh free() để tránh lỗi tràn bộ nhớ.**
+
+Ví dụ: 
+
+`int main(int argc, char const * argv[]){ `
+
+`int cout = 0; // stack segment`
+    
+`int *array = (int *)malloc(sizeof(int)*4); // Automatic Memory allocation` 
+
+`array = realloc(array, sizeof(int)*7); // Automatic Memory allocation, tăng vùng nhớ lên cho array`
+    
+`free(array); // Giải phóng bộ nhớ con trỏ array`
+    
+`return 0;`
+    
+`}`
