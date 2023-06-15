@@ -211,7 +211,7 @@ Ví dụ:
     
 `int *array = (int *)malloc(sizeof(int)*4); // Automatic Memory allocation` 
 
-`array = realloc(array, sizeof(int)*7); // Automatic Memory allocation, tăng vùng nhớ lên cho array`
+`array = (int *)realloc(array, sizeof(int)*7); // Automatic Memory allocation, tăng vùng nhớ lên cho array`
     
 `free(array); // Giải phóng bộ nhớ con trỏ array`
     
