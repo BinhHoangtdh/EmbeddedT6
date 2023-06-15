@@ -96,3 +96,45 @@ Ví dụ:
 ## 5. Kích thước con trỏ
 
 Kích thươc con trỏ phụ thuộc vào kiến trúc của vi xử lý.
+# PHÂN VÙNG NHỚ TRONG RAM
+
+<p align="center">
+  <img src="https://github.com/BinhHoangtdh/EmbeddedT6/assets/90816265/7940b5ff-b982-4f56-ad05-108fa6159358">
+</p>
+
+## 1. Text
+
+– Quyền truy cập chỉ Read và nó chưa lệnh để thực thi nên tránh sửa đổi instruction.
+
+– Chứa khai báo hằng số trong chương trình (.rodata)
+
+## 2. Data (Initialized Data)
+
+– Quyền truy cập là read-write.
+– Chứa biến toàn cục or biến static với giá trị khởi tạo khác không.
+– Được giải phóng khi kết thúc chương trình.
+
+## 3. BSS (Uninitialized Data)
+
+– Quyền truy cập là read-write.
+
+– Chứa biến toàn cục or biến static với giá trị khởi tạo bằng không or không khởi tạo.
+
+– Được giải phóng khi kết thúc chương trình.
+## 4. Stack
+
+– Quyền truy cập là read-write.
+
+– Được sử dụng cấp phát cho biến local, input parameter của hàm,…
+
+– Sẽ được giải phóng khi ra khỏi block code/hàm
+
+## 5. Heap
+
+– Quyền truy cập là read-write.
+
+– Được sử dụng để cấp phát bộ nhớ động như: Malloc, Calloc, …
+
+– Sẽ được giải phóng khi gọi hàm free,…
+
+**Lưu ý: Khi sử dụng lệnh cấp phát bộ nhớ động thì sau khi dùng xong thì phải giải phóng bộ nhớ bằng lệnh free() để tránh lỗi tràn bộ nhớ.**
