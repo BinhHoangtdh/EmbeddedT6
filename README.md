@@ -230,8 +230,11 @@ Ví dụ:
 - Chỉ được sử dụng trong file khai báo nó, các file khác không được truy cập.
 # BIẾN VOLATILE
 - Volatile đại diện cho các biến có thể thay đổi bất thường mà không thông qua nguồn source code. Việc khai báo biến volatile là rất cần thiết để tránh những lỗi sai khó phát hiện do tính năng optimization của compiler.
-- Một biến cần được khai báo dưới dạng biến 
-# TỪ KHÓA EXTERN
+- Một biến cần được khai báo dưới dạng biến volatile khi:
+  -  Memory-mapped peripheral registers (thanh ghi ngoại vi có ánh xạ đến ô nhớ). Ví dụ như biến đọc giá trị kết quả chuyển đổi ADC (từ thanh ghi Data của vi điều khiển);
+  -  Biến toàn cục được truy xuất từ các tiến trình con xử lý ngắt (interrupt service routine): Ví dụ như khai báo biến đếm count, biến này thay đổi giá trị khi ta bấm nút xảy ra ngắt ngoài từ một chân của VĐK.
+  -  Biến toàn cục được truy xuất từ nhiều tác vụ trong một ứng dụng đa luồng.
+# BIẾN EXTERN
 Để có thể truy cập giá trị một biến toàn cục, một mảng hay một hàm ở 1 file khác ta sử dụng từ khóa EXTERN.
 
 Ví dụ: 
