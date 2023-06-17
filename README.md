@@ -218,3 +218,40 @@ Ví dụ:
 `return 0;`
     
 `}`
+# BIẾN STATIC
+## 1. Biến static trong khai báo biến cục bộ
+- Được khởi tạo 1 lần duy nhất trong cả chương trình.
+- Giá trị được giữ nguyên cả khi ra khỏi hàm.
+- Chỉ được sử dụng bên trong hàm khai báo nó.
+## 2. Biến static trong khai báo biến toàn cục
+- Sử dụng tương tự như biến toàn cục
+- Chỉ được sử dụng trong file khai báo nó, các file khác không được truy cập.
+## 3. Biến static trong khai báo hàm
+- Chỉ được sử dụng trong file khai báo nó, các file khác không được truy cập.
+# BIẾN VOLATILE
+- Volatile đại diện cho các biến có thể thay đổi bất thường mà không thông qua nguồn source code. Việc khai báo biến volatile là rất cần thiết để tránh những lỗi sai khó phát hiện do tính năng optimization của compiler.
+- Một biến cần được khai báo dưới dạng biến 
+# TỪ KHÓA EXTERN
+Để có thể truy cập giá trị một biến toàn cục, một mảng hay một hàm ở 1 file khác ta sử dụng từ khóa EXTERN.
+
+Ví dụ: 
+
+- Ở file main.c
+  
+  `int x = 0;`
+  
+  `void tang_bien(){`
+  
+  `x++;`
+  
+  `}`
+  
+- File test.c muốn sử dụng biến x của file main.c thì ta làm như sau:
+
+  `extern int x;`
+  
+  `void giam_bien(){`
+  
+  `x--;`
+  
+  `}`
