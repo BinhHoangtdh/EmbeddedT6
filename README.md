@@ -16,7 +16,7 @@
 `};`
 
 - Mỗi member trong kiểu struct có môt địa chỉ độc lập nên giá trị của mỗi member là riêng biệt.
-- Kích thước của một biến kiểu struct bằng kích thước các member + bộ nhớ đệm (nếu có). Để tính kích thước nó thường lấy member có kích thước kiểu dữ liệu lớn nhất để quét.
+- Kích thước của một biến kiểu struct bằng kích thước các member + bộ nhớ đệm (nếu có). Để tính kích thước nó thường lấy member có kích thước **kiểu dữ liệu lớn nhất** để quét.
 - Để truy cập đến các thành phần trong Struct ta làm như sau:
   -  Đối với biến thường: <Tên_biến_thường>.<Tên_member>
   -  Đối với biến con trỏ Pointer: <Tên_Pointer>-><Tên_member>
@@ -37,7 +37,7 @@
 `};`
 
 - Mỗi member trong kiểu Union có chung một địa chỉ nên giá trị của các member là chung. Vì vậy tại một thời điểm chỉ truy cập được một member nhất định
-- Kích thước của một biến kiểu Union bằng kích thước của member lớn nhất.
+- Kích thước của một biến kiểu Union bằng **kích thước của member lớn nhất**.
 - Để truy cập đến các thành phần trong Union ta làm như sau:
   -  Đối với biến thường: <Tên_biến_thường>.<Tên_member>
   -  Đối với biến con trỏ Pointer: <Tên_Pointer>-><Tên_member>
