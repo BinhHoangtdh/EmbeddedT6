@@ -1,39 +1,46 @@
 # USER-DEFINED DATA TYPE
 ## 1. STRUCT
+- Struct là một kiểu dữ liệu do người dùng tự định nghĩa, nó có thể chứa các thành phần- member với các kiểu dữ liệu khác nhau.
+- Cú pháp:
+  
+`struct structureName`
+
+`{`
+
+ `   dataType member1;`
+    
+  `  dataType member2;`
+    
+  `  ...`
+    
+`};`
+
+- Mỗi member trong kiểu struct có môt địa chỉ độc lập nên giá trị của mỗi member là riêng biệt.
+- Kích thước của một biến kiểu struct bằng kích thước các member + bộ nhớ đệm (nếu có). Để tính kích thước nó thường lấy member có kích thước kiểu dữ liệu lớn nhất để quét.
+- Để truy cập đến các thành phần trong Struct ta làm như sau:
+  -  Đối với biến thường: <Tên_biến_thường>.<Tên_member>
+  -  Đối với biến con trỏ Pointer: <Tên_Pointer>-><Tên_member>
 ## 2. UNION
+- Union là một kiểu dữ liệu do người dùng tự định nghĩa, nó có thể chứa các thành phần- member với các kiểu dữ liệu khác nhau.
+- Cú pháp:
+  
+`union UnionName`
 
+`{`
 
+ `   dataType member1;`
+    
+  `  dataType member2;`
+    
+  `  ...`
+    
+`};`
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+- Mỗi member trong kiểu Union có chung một địa chỉ nên giá trị của các member là chung. Vì vậy tại một thời điểm chỉ truy cập được một member nhất định
+- Kích thước của một biến kiểu Union bằng kích thước của member lớn nhất.
+- Để truy cập đến các thành phần trong Union ta làm như sau:
+  -  Đối với biến thường: <Tên_biến_thường>.<Tên_member>
+  -  Đối với biến con trỏ Pointer: <Tên_Pointer>-><Tên_member>
 # COMPILER
 Quy trình biên dịch là quá trình chuyển đổi từ ngôn ngữ bậc cao (C/C++, Pascal, Java, C#…) sang ngôn ngữ đích (ngôn ngữ máy) để máy tính có thể hiểu và thực thi. Quá trình này gồm các giai đoạn sau: Preprocessor, Compiler, Assembler và Linker.
 <p align="center">
