@@ -162,7 +162,9 @@ Ví dụ:
 ## 2. Data (Initialized Data)
 
 – Quyền truy cập là read-write.
+
 – Chứa biến toàn cục or biến static với giá trị khởi tạo khác không.
+
 – Được giải phóng khi kết thúc chương trình.
 
 Ví dụ:
