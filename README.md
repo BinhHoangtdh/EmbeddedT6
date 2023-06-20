@@ -1,3 +1,19 @@
+# MACRO - FUNCTION
+## 1. MACRO
+- Macro xảy ra ở quá trình tiền xử lý. Sau quá trình tiền xử lý thì các đoạn (các biến, các hàm) được định nghĩa sẽ được thay bằng các giá trị tương ứng. Nó không phải là code
+
+
+
+
+
+
+
+
+
+
+
+
+
 # USER-DEFINED DATA TYPE
 ## 1. STRUCT
 - Struct là một kiểu dữ liệu do người dùng tự định nghĩa, nó có thể chứa các thành phần- member với các kiểu dữ liệu khác nhau.
