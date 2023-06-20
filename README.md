@@ -5,6 +5,7 @@
 ## 2. FUNCTION
 - Sử dụng function thì chỉ tốn một vùng nhớ cố định để lưu cho nên khi gọi hàm thì chương trình ít tốn bộ nhớ nhưng tốc độ chạy của chương trình lại chậm.
 - Khi chương trình chạy từ trên xuống dưới trong hàm main, nếu gặp lệnh gọi function thì **Stack pointer** sẽ lưu địa chỉ hiện tại sau đó **Program counter** sẽ nhảy đến địa chỉ đinh nghĩa hàm function. Khi xử lý xong thì Program counter nhận giá trị của Stack pointer lúc trước và tiếp tục thực hiện chương trình.
+- Fuction được thực hiện ở quá trình compiler
 
 <p align="center">
   <img src="https://github.com/BinhHoangtdh/EmbeddedT6/assets/90816265/08f2b48b-611b-4dab-9b62-e32b2371b9ca">
