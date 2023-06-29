@@ -1,3 +1,59 @@
+# MACRO - FUNCTION
+## 1. MACRO
+- Macro xảy ra ở quá trình tiền xử lý. Sau quá trình tiền xử lý thì các đoạn (các biến, các hàm) được định nghĩa sẽ được thay bằng các giá trị tương ứng. Nó không phải là code
+- Khi gọi macro nhiều lần thì tốn kích thước bộ nhớ, nhưng tốc độ chạy của chương trình nhanh
+## 2. FUNCTION
+- Sử dụng function thì chỉ tốn một vùng nhớ cố định để lưu cho nên khi gọi hàm thì chương trình ít tốn bộ nhớ nhưng tốc độ chạy của chương trình lại chậm.
+- Khi chương trình chạy từ trên xuống dưới trong hàm main, nếu gặp lệnh gọi function thì **Stack pointer** sẽ lưu địa chỉ hiện tại sau đó **Program counter** sẽ nhảy đến địa chỉ đinh nghĩa hàm function. Khi xử lý xong thì Program counter nhận giá trị của Stack pointer lúc trước và tiếp tục thực hiện chương trình. Bước nhảy của **Program counter** phụ thuộc vào cấu trúc VDK.
+- Fuction được thực hiện ở quá trình compiler
+
+<p align="center">
+  <img src="https://github.com/BinhHoangtdh/EmbeddedT6/assets/90816265/08f2b48b-611b-4dab-9b62-e32b2371b9ca">
+</p>
+
+# USER-DEFINED DATA TYPE
+## 1. STRUCT
+- Struct là một kiểu dữ liệu do người dùng tự định nghĩa, nó có thể chứa các thành phần- member với các kiểu dữ liệu khác nhau.
+- Cú pháp:
+  
+`struct structureName`
+
+`{`
+
+ `   dataType member1;`
+    
+  `  dataType member2;`
+    
+  `  ...`
+    
+`};`
+
+- Mỗi member trong kiểu struct có môt địa chỉ độc lập nên giá trị của mỗi member là riêng biệt.
+- Kích thước của một biến kiểu struct bằng kích thước các member + bộ nhớ đệm (nếu có). Để tính kích thước nó thường lấy member có kích thước **kiểu dữ liệu lớn nhất** để quét.
+- Để truy cập đến các thành phần trong Struct ta làm như sau:
+  -  Đối với biến thường: <Tên_biến_thường>.<Tên_member>
+  -  Đối với biến con trỏ Pointer: <Tên_Pointer>-><Tên_member>
+## 2. UNION
+- Union là một kiểu dữ liệu do người dùng tự định nghĩa, nó có thể chứa các thành phần- member với các kiểu dữ liệu khác nhau.
+- Cú pháp:
+  
+`union UnionName`
+
+`{`
+
+ `   dataType member1;`
+    
+  `  dataType member2;`
+    
+  `  ...`
+    
+`};`
+
+- Mỗi member trong kiểu Union có chung một địa chỉ nên giá trị của các member là chung. Vì vậy tại một thời điểm chỉ truy cập được một member nhất định
+- Kích thước của một biến kiểu Union bằng **kích thước của member lớn nhất**.
+- Để truy cập đến các thành phần trong Union ta làm như sau:
+  -  Đối với biến thường: <Tên_biến_thường>.<Tên_member>
+  -  Đối với biến con trỏ Pointer: <Tên_Pointer>-><Tên_member>
 # COMPILER
 Quy trình biên dịch là quá trình chuyển đổi từ ngôn ngữ bậc cao (C/C++, Pascal, Java, C#…) sang ngôn ngữ đích (ngôn ngữ máy) để máy tính có thể hiểu và thực thi. Quá trình này gồm các giai đoạn sau: Preprocessor, Compiler, Assembler và Linker.
 <p align="center">
@@ -119,7 +175,9 @@ Ví dụ:
 ## 2. Data (Initialized Data)
 
 – Quyền truy cập là read-write.
+
 – Chứa biến toàn cục or biến static với giá trị khởi tạo khác không.
+
 – Được giải phóng khi kết thúc chương trình.
 
 Ví dụ:
