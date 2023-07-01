@@ -6,6 +6,7 @@
 
 int main(int argc, char const *argv[])
 {
+    uint16_t number;
     uint16_t *array = createArray(SIZE_ARRAY);
 
     sort(array,SIZE_ARRAY);
@@ -14,8 +15,9 @@ int main(int argc, char const *argv[])
     {
         printf("array[%d] = %d\n", i, array[i]);
     }
-   
-    binarySearch(array, SIZE_ARRAY, 10);
+    printf("Nhap gia tri can tim: ");
+    scanf("%d", &number);
+    binarySearch(array, SIZE_ARRAY, number);
     free(array);
     return 0;
 }
