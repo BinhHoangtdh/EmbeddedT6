@@ -16,6 +16,6 @@ int main(int argc, char const *argv[])
     }
    
     binarySearch(array, SIZE_ARRAY, 10);
-
+    free(array);
     return 0;
 }
