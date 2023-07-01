@@ -13,12 +13,11 @@
 #include <time.h>
 #include <stdlib.h>
 
-#define SIZE_ARRAY 10000
 
 int random_number(int minN, int maxN);
 uint16_t *createArray(uint16_t length);
 void sort(uint16_t arr[], uint16_t length);
-int binarySearch(uint16_t arr[], uint16_t length, uint16_t number);
+uint16_t binarySearch(uint16_t arr[], uint16_t length, uint16_t number);
 
 
 #endif
