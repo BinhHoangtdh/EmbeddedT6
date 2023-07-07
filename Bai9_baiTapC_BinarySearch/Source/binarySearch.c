@@ -69,7 +69,7 @@ void sort(uint16_t arr[], uint16_t length){
 * Output:
 *   returns the position of "number".
 */
-int binarySearch(uint16_t arr[], uint16_t length, uint16_t number){
+uint16_t binarySearch(uint16_t arr[], uint16_t length, uint16_t number){
 
     uint16_t left_pos = 0;
     uint16_t right_pos = length - 1;
@@ -77,7 +77,6 @@ int binarySearch(uint16_t arr[], uint16_t length, uint16_t number){
     while(left_pos <= right_pos){
         uint16_t middle_pos = (left_pos + right_pos)/2;
         if( arr[middle_pos] == number){
-            printf("So can tim o vi tri: %d",middle_pos);
             return middle_pos;
         }
         else if( arr[middle_pos] > number){
@@ -86,7 +85,7 @@ int binarySearch(uint16_t arr[], uint16_t length, uint16_t number){
         else left_pos = middle_pos + 1;
     }
 
-    printf("So can tim khong ton tai!\n");
+    
     return -1 ;
 
 }
