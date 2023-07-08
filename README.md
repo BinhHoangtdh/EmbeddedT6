@@ -316,3 +316,23 @@ Ví dụ:
   `x--;`
   
   `}`
+# LINKED LIST - DANH SÁCH LIÊN KẾT
+## So sánh ưu nhược điểm của danh sách liên kết với mảng 1 chiều:
+### Danh sách liên kết
+- Ưu điểm:
+  - Việc thêm và xóa phần tử đơn giản chỉ cần thay đổi mối liên kết giữa các node với nhau
+  - Không cần biết trước số lượng phần tử -> Kích thước tối đa phụ thuộc vào bộ nhớ, Kích thước thay đổi trong quá trình thêm/ xóa phần tử
+  - Cấp phát bộ nhớ động: Bộ nhớ được cấp phát trong quá trình chạy
+  - Các phần tử không cần nằm liên tiếp nhau trong bộ nhớ máy tính. Do đó khắc phục tình trạng phân mảnh bộ nhớ
+- Nhược điểm:
+  - Không thể truy xuất đến từng phần tử của danh sách thông qua toán tử chỉ số mà phải duyệt tuần tự thông qua các phần tử
+  - Tốn bộ nhớ do chứa thêm con trỏ để liên kết các node với nhau
+### Mảng một chiều
+- Ưu điểm:
+  - Truy xuất đến từng phần tử trong mảng thông qua toán tử chỉ số
+  - Ít tốn bộ nhớ
+- Nhược điểm:
+  - Việc thêm và xóa phần tử bản chất không phải thêm hoặc xóa thật sự mà đó chỉ là thay đổi vị trí các phần tử với nhau
+  - Phải biết trước số lượng phần tử mảng-> kích thước cố định -> Cần chỉ rõ kích thước trong khi khai báo
+  - Cấp phát bộ nhớ tĩnh: Bộ nhớ được cấp phát trong quá trình biên dịch
+  - Các phần tử phải nằm liên tiếp nhau trong bộ nhớ máy tính. Do đó dẫn đến tình trạng phân mảnh bộ nhớ
