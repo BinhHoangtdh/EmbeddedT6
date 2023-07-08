@@ -317,6 +317,32 @@ Ví dụ:
   
   `}`
 # LINKED LIST - DANH SÁCH LIÊN KẾT
+## Định nghĩa
+Danh sách liên kết đơn là một tập hợp các Node được phân bố động, được sắp xếp theo cách sao cho mỗi Node chứa “một giá trị”(Data) và “một con trỏ”(Next). Con trỏ sẽ trỏ đến phần tử kế tiếp của danh sách liên kết đó. Nếu con trỏ mà trỏ tới NULL, nghĩa là đó là phần tử cuối cùng của linked list.
+
+<p align="center">
+  <img src="https://github.com/BinhHoangtdh/EmbeddedT6/assets/90816265/e8f6d4fc-3c14-419c-b621-f42feb5e6a77">
+</p>
+
+Khai báo cấu trúc node cho linked list:
+
+`struct <Tên_LinkedList>{`
+
+    <Kiểu_dữ_liệu> <Tên_data>;
+    
+    struct <Tên_LinkedList> *<tên_Pointer>;
+    
+ `};`
+ 
+ Ví dụ:
+
+ `struct LinkedList{`
+ 
+    int data;
+    
+    struct LinkedList *next;
+    
+ `};`
 ## So sánh ưu nhược điểm của danh sách liên kết với mảng 1 chiều:
 ### Danh sách liên kết
 - Ưu điểm:
