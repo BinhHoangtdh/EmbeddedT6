@@ -316,3 +316,49 @@ Ví dụ:
   `x--;`
   
   `}`
+# LINKED LIST - DANH SÁCH LIÊN KẾT
+## Định nghĩa
+Danh sách liên kết đơn là một tập hợp các Node được phân bố động, được sắp xếp theo cách sao cho mỗi Node chứa “một giá trị”(Data) và “một con trỏ”(Next). Con trỏ sẽ trỏ đến phần tử kế tiếp của danh sách liên kết đó. Nếu con trỏ mà trỏ tới NULL, nghĩa là đó là phần tử cuối cùng của linked list.
+
+<p align="center">
+  <img src="https://github.com/BinhHoangtdh/EmbeddedT6/assets/90816265/e8f6d4fc-3c14-419c-b621-f42feb5e6a77">
+</p>
+
+Khai báo cấu trúc node cho linked list:
+
+`struct <Tên_LinkedList>{`
+
+    <Kiểu_dữ_liệu> <Tên_data>;
+    
+    struct <Tên_LinkedList> *<tên_Pointer>;
+    
+ `};`
+ 
+ Ví dụ:
+
+ `struct LinkedList{`
+ 
+    int data;
+    
+    struct LinkedList *next;
+    
+ `};`
+## So sánh ưu nhược điểm của danh sách liên kết với mảng 1 chiều:
+### Danh sách liên kết
+- Ưu điểm:
+  - Việc thêm và xóa phần tử đơn giản chỉ cần thay đổi mối liên kết giữa các node với nhau
+  - Không cần biết trước số lượng phần tử -> Kích thước tối đa phụ thuộc vào bộ nhớ, Kích thước thay đổi trong quá trình thêm/ xóa phần tử
+  - Cấp phát bộ nhớ động: Bộ nhớ được cấp phát trong quá trình chạy
+  - Các phần tử không cần nằm liên tiếp nhau trong bộ nhớ máy tính. Do đó khắc phục tình trạng phân mảnh bộ nhớ
+- Nhược điểm:
+  - Không thể truy xuất đến từng phần tử của danh sách thông qua toán tử chỉ số mà phải duyệt tuần tự thông qua các phần tử
+  - Tốn bộ nhớ do chứa thêm con trỏ để liên kết các node với nhau
+### Mảng một chiều
+- Ưu điểm:
+  - Truy xuất đến từng phần tử trong mảng thông qua toán tử chỉ số
+  - Ít tốn bộ nhớ
+- Nhược điểm:
+  - Việc thêm và xóa phần tử bản chất không phải thêm hoặc xóa thật sự mà đó chỉ là thay đổi vị trí các phần tử với nhau
+  - Phải biết trước số lượng phần tử mảng-> kích thước cố định -> Cần chỉ rõ kích thước trong khi khai báo
+  - Cấp phát bộ nhớ tĩnh: Bộ nhớ được cấp phát trong quá trình biên dịch
+  - Các phần tử phải nằm liên tiếp nhau trong bộ nhớ máy tính. Do đó dẫn đến tình trạng phân mảnh bộ nhớ
