@@ -362,3 +362,43 @@ Khai báo cấu trúc node cho linked list:
   - Phải biết trước số lượng phần tử mảng-> kích thước cố định -> Cần chỉ rõ kích thước trong khi khai báo
   - Cấp phát bộ nhớ tĩnh: Bộ nhớ được cấp phát trong quá trình biên dịch
   - Các phần tử phải nằm liên tiếp nhau trong bộ nhớ máy tính. Do đó dẫn đến tình trạng phân mảnh bộ nhớ
+# C++
+## CLASS
++ Class là một kiểu dữ liệu do người dùng tự định nghĩa, là một mô tả trừu tượng của nhóm các đối tượng (object) có
+cùng bản chất. Một class sẽ bao gồm các thuộc tính (Property) và phương thức (Method).
+
++ Có 3 phạm vi truy cập trong C++ là public, private và protected.
+ 
+  + Private: Khi không muốn người khác tùy ý gán giá trị hoặc muốn xử lý trước khi trả về giá trị
+  
+  + Pulic: Các thuộc tính và phương thức khai báo có thể được truy cập trực tiếp, các property có thể tùy ý gán giá trị hoặc không cần xử lý trước khi trả về giá trị
+  
+  + Protected: khi muốn các phương thức và thuộc tính chỉ có thể truy cập qua các class kế thừa nó hoặc chính nó.
+  
++ Static member là Property được sử dụng chung cho tất cả object khác nhau thuộc class đó
+
++ Constructor là một hàm đặc biệt, được gọi khi khởi tạo object
+
++ Deconstructor là hàm được gọi trước khi thu lại vùng nhớ của object
+
++ Ví dụ khai báo class và cách sử dụng:
+
+`class Person {`
+
+`public:`
+
+`string firstName; // property`
+
+`string lastName; // property`
+
+`int age; // property`
+
+`void fullname() { // method`
+
+`cout << firstName << ' ' << lastName;`
+
+`}`
+
+`};`
+
+`Person nv; // nv được gọi là object`
