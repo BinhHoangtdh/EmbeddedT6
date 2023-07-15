@@ -402,3 +402,31 @@ cùng bản chất. Một class sẽ bao gồm các thuộc tính (Property) và
 `};`
 
 `Person nv; // nv được gọi là object`
+# CÁC ĐẶC TÍNH HƯỚNG ĐỐI TƯỢNG
+## TÍNH KẾ THỪA
+ 
+PUBLIC: 
+
+             public(class cha) --> public( class con)
+             
+             protected (class cha) --> protected( class con)
+             
+             private ko kế thừa được
+             
+PROTECTED:
+
+              public(class cha) --> protected( class con)
+              
+              protected (class cha) --> protected( class con)
+              
+PRIVATE:
+
+              public(class cha) --> private( class con)
+              
+              protected (class cha) --> private( class con)
+              
+## TÍNH ĐÓNG GÓI
+Các PROPERTY (biến) phải được nằm trong PROTECTED hoặc PRIVATE ko được nằm trong pulic (trong pulic chỉ có method thôi). Thông qua những method để truy cập đến PROPERTY.
+## TÍNH TRỪU TƯỢNG
+Là khi một method đóng vai trò là một quá trình trung gian (chương trình con) góp phần tạo ra kết quả cuối cùng cho medthod chính thì nó phải được nằm trong PROTECTED hoặc PRIVATE.
+              
