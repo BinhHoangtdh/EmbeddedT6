@@ -480,9 +480,22 @@ Hàm ảo chỉ khác hàm thành phần thông thường khi được gọi t�
 - Vector trong C++ là một đối tượng dùng để chứa các đối tượng khác (phần tử) và các phần tử vector được đặt trong vùng bộ nhớ liền kề để chúng có thể được truy cập và duyệt qua bằng cách sử dụng iterator.
 - Vector trong C++ giống dynamic array (mảng động) nhưng có khả năng tự động thay đổi kích thước khi một phần tử được chèn hoặc xóa tùy thuộc vào nhu cầu của tác vụ được thực thi.
 - Các hàm của vector như: size(), push_back(), pop_back(), emplace(), emplace_back, erase(), clear(), insert(), assign(),...
+- Cú pháp: `std::vector <data-type> name_of_vector;`
 - Ví dụ:
 
 <p align="center">
   <img src="https://github.com/BinhHoangtdh/EmbeddedT6/assets/90816265/a5bc3d0a-8554-471b-a182-13bcbc52307f">
 </p>
+  
+# LIST
+- List là một danh sách (hay containers) chứa tập hợp các Node (phần tử) được phân bố động trên các vùng nhớ KHÔNG LIỀN KỀ NHAU, được sắp xếp theo cách sao cho mỗi Node lưu trữ các thông tin dữ liệu 'Data' và con trỏ lưu địa chỉ của nút kế tiếp '*Next'. List cho phép chèn thêm hay xóa bất kì một đối tượng nào trong danh sách.
+- Cú pháp: `std::list <data-type> name_of_list;`
+- So với vector, list có tốc độ duyệt chậm, nhưng một khi vị trí đã được tìm thấy, việc chèn và xóa diễn ra nhanh chóng.
+- Ví dụ:
+
+<p align="center">
+  <img src="https://github.com/BinhHoangtdh/EmbeddedT6/assets/90816265/29c2c8d6-19ed-4d38-a386-c01e9e1e2649">
+</p>
+  
+# LAMBDA
   
