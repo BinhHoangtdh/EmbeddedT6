@@ -505,7 +505,7 @@ Hàm ảo chỉ khác hàm thành phần thông thường khi được gọi t�
    definition of method   
 } 
   Trong đó:
-  - capture clause: là các biến được sử dụng theo kiểu toàn cục trong hàm
+  - capture clause: là các biến được sử dụng theo kiểu toàn cục trong hàm, **nếu có nhiều biến cần lấy thì thay bằng dấu '='**
   - parameters: các tham số đầu vào
   - return-type: giá trị trả về
 - Ví dụ:
