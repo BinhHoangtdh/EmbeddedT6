@@ -498,7 +498,7 @@ Hàm ảo chỉ khác hàm thành phần thông thường khi được gọi t�
 </p>
   
 # LAMBDA
-- Là một hàm được khởi tạo cục bộ, không yêu cầu tên và được sử dụng ngay trong một hàm.
+- Là một hàm được khởi tạo và định nghĩa cục bộ, không yêu cầu tên và được sử dụng ngay trong một hàm.
 - Cú pháp:
 [capture clause] (parameters) -> return-type  
 {   
