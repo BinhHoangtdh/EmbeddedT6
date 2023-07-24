@@ -404,7 +404,8 @@ cùng bản chất. Một class sẽ bao gồm các thuộc tính (Property) và
 `Person nv; // nv được gọi là object`
 # CÁC ĐẶC TÍNH HƯỚNG ĐỐI TƯỢNG
 ## TÍNH KẾ THỪA
- 
+Một class có thể kế thừa các thuộc tính của một class khác đã tồn tại trước đó, có 3 dạng kế thừa:
+
 PUBLIC: 
 
              public(class cha) --> public( class con)
@@ -429,4 +430,59 @@ PRIVATE:
 Các PROPERTY (biến) phải được nằm trong PROTECTED hoặc PRIVATE ko được nằm trong pulic (trong pulic chỉ có method thôi). Thông qua những method để truy cập đến PROPERTY.
 ## TÍNH TRỪU TƯỢNG
 Là khi một method đóng vai trò là một quá trình trung gian (chương trình con) góp phần tạo ra kết quả cuối cùng cho medthod chính thì nó phải được nằm trong PROTECTED hoặc PRIVATE.
-              
+## TÍNH ĐA HÌNH
+Tính đa hình: Trong một class có thể có nhiều method trùng tên nhau, với input parameter truyền vào khác nhau (khác về kiểu dữ liệu tham số hoặc số lượng tham số truyền vào).
+
+Ví dụ: tính đa hình của hàm tính tổng Tong():
+
+<p align="center">
+  <img src="https://github.com/BinhHoangtdh/EmbeddedT6/assets/90816265/58210c98-a53d-4d45-8db1-bb5c2df76685">
+</p>
+
+# NAMEPLACE
+Namespace là từ khóa trong C++ được sử dụng để định nghĩa một phạm vi nhằm mục đích phân biệt các hàm, lớp, biến, struct, mảng ... cùng tên trong các thư viện khác nhau.
+
+Ví dụ: namespace trong file main.cpp và 1 file .cpp khác
+
+<p align="center">
+  <img src="https://github.com/BinhHoangtdh/EmbeddedT6/assets/90816265/250c8bb3-8e24-47a9-8c8f-2df75dbb5341">
+</p>
+
+<p align="center">
+  <img src="https://github.com/BinhHoangtdh/EmbeddedT6/assets/90816265/3b2e7b5c-7030-402f-bb0f-dbdc8fbfe412">
+</p>
+
+# TEMPLATE
+- Template (khuôn mẫu) là một từ khóa trong C++, và là một kiểu dữ liệu trừu tượng tổng quát hóa cho các kiểu dữ liệu int, float, double, bool...
+
+- Template trong C++ có 2 loại đó là function template & class template.
+
+- Template giúp người lập trình định nghĩa tổng quát cho hàm và lớp thay vì phải nạp chồng (overloading) cho từng hàm hay phương thức với những kiểu dữ liệu khác nhau.
+
+Ví dụ:
+
+<p align="center">
+  <img src="https://github.com/BinhHoangtdh/EmbeddedT6/assets/90816265/966b57b8-42fa-420c-9fd8-d8433b4725f1">
+</p>
+
+# VIRTUAL FUNCTION - HÀM ẢO
+Virtual function: là một hàm thành viên trong class cha (lớp cơ sở), được sử dụng khi mà ta thiết kế một method ta biết trước là nó sẽ được kế thừa bởi những class con (lớp dẫn xuất) sau đó và trong quá trình sử dụng thì những class con có thể ghi đè lên những method này. Muốn class con này sử dụng được cái method đã ghi đè này thì ta dùng virtual function.
+
+Ví dụ:
+
+<p align="center">
+  <img src="https://github.com/BinhHoangtdh/EmbeddedT6/assets/90816265/0b097a24-cdb7-4beb-8adf-44c6c3ca2381">
+</p>
+
+Lưu ý: Con trỏ của lớp cơ sở có thể chứa địa chỉ của đối tượng thuộc lớp dẫn xuất, nhưng ngược lại thì không được.
+Hàm ảo chỉ khác hàm thành phần thông thường khi được gọi từ một con trỏ. Sử dụng hàm ảo khi muốn con trỏ đang trỏ tới đối tượng của lớp nào thì hàm thành phần của lớp đó sẽ được gọi mà không xem xét đến kiểu của con trỏ.
+# VECTOR
+- Vector trong C++ là một đối tượng dùng để chứa các đối tượng khác (phần tử) và các phần tử vector được đặt trong vùng bộ nhớ liền kề để chúng có thể được truy cập và duyệt qua bằng cách sử dụng iterator.
+- Vector trong C++ giống dynamic array (mảng động) nhưng có khả năng tự động thay đổi kích thước khi một phần tử được chèn hoặc xóa tùy thuộc vào nhu cầu của tác vụ được thực thi.
+- Các hàm của vector như: size(), push_back(), pop_back(), emplace(), emplace_back, erase(), clear(), insert(), assign(),...
+- Ví dụ:
+
+<p align="center">
+  <img src="https://github.com/BinhHoangtdh/EmbeddedT6/assets/90816265/a5bc3d0a-8554-471b-a182-13bcbc52307f">
+</p>
+  
