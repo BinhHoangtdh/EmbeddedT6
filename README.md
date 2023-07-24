@@ -498,4 +498,19 @@ Hàm ảo chỉ khác hàm thành phần thông thường khi được gọi t�
 </p>
   
 # LAMBDA
-  
+- Là một hàm được khởi tạo cục bộ, không yêu cầu tên và được sử dụng ngay trong một hàm.
+- Cú pháp:
+[capture clause] (parameters) -> return-type  
+{   
+   definition of method   
+} 
+  Trong đó:
+  - capture clause: là các biến được sử dụng theo kiểu toàn cục trong hàm
+  - parameters: các tham số đầu vào
+  - return-type: giá trị trả về
+- Ví dụ:
+
+<p align="center">
+  <img src="https://github.com/BinhHoangtdh/EmbeddedT6/assets/90816265/d93610a6-1805-4bd3-b4df-8e69bcd3e4c3">
+</p>
+
