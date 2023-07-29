@@ -30,19 +30,18 @@ class SinhVien{
         double DIEM_TOAN;
         double DIEM_LY;
         double DIEM_HOA;
-        double DIEM_TRUNG_BINH = Diem_TB();
-        TypeHocLuc HOC_LUC = xepLoaiHL();
+        double DIEM_TRUNG_BINH;
+        TypeHocLuc HOC_LUC;
 
-        double Diem_TB(){
-            return ((DIEM_TOAN + DIEM_LY + DIEM_HOA)/3);
+        double TinhDTB(double dtoan, double dly, double dhoa){
+            return (dtoan + dly + dhoa)/3;
         }
-        TypeHocLuc xepLoaiHL(){
-            if(DIEM_TRUNG_BINH >= 8) return GIOI;
-            else if(DIEM_TRUNG_BINH >= 6.5) return KHA;
-            else if(DIEM_TRUNG_BINH >= 5) return TRUNG_BINH;
+        TypeHocLuc xepLoaiHL(double dtb){
+            if( dtb>= 8) return GIOI;
+            else if(dtb >= 6.5) return KHA;
+            else if(dtb >= 5) return TRUNG_BINH;
             else return YEU;
         }
-  
     public:
         SinhVien(string ten, int tuoi, TypeGioiTinh gioi_tinh,
         double diem_toan, double diem_ly, double diem_hoa);
@@ -67,7 +66,7 @@ class SinhVien{
         }
 
         TypeHocLuc getHocLuc(){
-            return HOC_LUC;
+            return HOC_LUC = xepLoaiHL(DIEM_TRUNG_BINH);
         }
         double getDiemToan(){
             return DIEM_TOAN;
@@ -78,11 +77,11 @@ class SinhVien{
         double getDiemHoa(){
             return DIEM_HOA;
         }
+        
         double getDTB(){
-            return DIEM_TRUNG_BINH;
+            return DIEM_TRUNG_BINH = TinhDTB(DIEM_TOAN, DIEM_LY, DIEM_HOA);
         }
 };
-
 
 SinhVien::SinhVien(string ten, int tuoi, TypeGioiTinh gioi_tinh,
         double diem_toan, double diem_ly, double diem_hoa){
@@ -96,12 +95,9 @@ SinhVien::SinhVien(string ten, int tuoi, TypeGioiTinh gioi_tinh,
         DIEM_TOAN = diem_toan;
         DIEM_LY = diem_ly;
         DIEM_HOA = diem_hoa;
-
-        assert((diem_toan >= 0 && diem_toan <= 10) && "Diem toan khong hop le!");
-        assert((diem_ly >= 0 && diem_ly <= 10) && "Diem ly khong hop le!");
-        assert((diem_hoa >= 0 && diem_hoa <= 10) && "Diem hoa khong hop le!");
-
-
+        // assert((diem_toan >= 0 && diem_toan <= 10) && "Diem toan khong hop le!");
+        // assert((diem_ly >= 0 && diem_ly <= 10) && "Diem ly khong hop le!");
+        // assert((diem_hoa >= 0 && diem_hoa <= 10) && "Diem hoa khong hop le!");
 }
 
 void SinhVien:: capNhatThongTinSV(string ten, int tuoi, TypeGioiTinh gioi_tinh,
@@ -113,170 +109,16 @@ void SinhVien:: capNhatThongTinSV(string ten, int tuoi, TypeGioiTinh gioi_tinh,
             DIEM_LY = diem_ly;
             DIEM_HOA = diem_hoa;
 }
-////////////////////////////////////////////////////////////////////////////////////////////////
-void ThemSinhVien(vector<SinhVien> &database){
 
-    string TEN;
-    int TUOI;
-    TypeGioiTinh GIOI_TINH;
-    double DIEM_TOAN;
-    double DIEM_LY;
-    double DIEM_HOA;
+void ThemSinhVien(vector<SinhVien> &database);
+void capNhatSV(vector<SinhVien> &database, int id);
+int xoaSinhVienID(vector<SinhVien> &database, int id);
+void timKiemTheoTenSV(vector<SinhVien> &database, string ten);
+void sapXepTheoDTB(vector<SinhVien> &database);
+void sapXepTheoTen(vector<SinhVien> &database);
+void showStudent(vector<SinhVien> &database);
+void pressAnyKey();
 
-    cout<<"Nhap ten sinh vien: ";
-    nhap(TEN, TEN.length()<1);
-
-    cout<<"Nhap tuoi sinh vien: ";
-    nhap(TUOI, (TUOI < 18) || (TUOI > 25));
-
-    cout<<"Nhap gioi tinh sinh vien: ";
-    do { scanf("%d",&GIOI_TINH);}
-    while (GIOI_TINH != 0 && GIOI_TINH != 1);
-
-    cout<<"Nhap diem mon toan: ";
-    nhap(DIEM_TOAN, (DIEM_TOAN < 0) || (DIEM_TOAN > 10));
-
-    cout<<"Nhap diem mon ly: ";
-    nhap(DIEM_LY, (DIEM_LY < 0) || (DIEM_LY > 10));
-
-    cout<<"Nhap diem mon hoa: ";
-    nhap(DIEM_HOA, (DIEM_HOA < 0) || (DIEM_HOA > 10));
-
-    SinhVien sv(TEN, TUOI, GIOI_TINH, DIEM_TOAN, DIEM_LY, DIEM_HOA);
-    
-    database.push_back(sv);
-}
-////////////////////////////////////////////////////////////////////////////////////////////////
-void capNhatSV(vector<SinhVien> &database, int id) {
-    
-    string TEN;
-    int TUOI;
-    TypeGioiTinh GIOI_TINH;
-    double DIEM_TOAN;
-    double DIEM_LY;
-    double DIEM_HOA;
-
-    for(int i = 0; i < database.size(); i++){
-        if (database[i].getID() == id) {
-            cout<<"Nhap lai ten sinh vien: ";
-            nhap(TEN, TEN.length()<1);
-
-            cout<<"Nhap lai tuoi sinh vien: ";
-            nhap(TUOI, (TUOI < 18) || (TUOI > 25));
-
-            cout<<"Nhap lai gioi tinh sinh vien: ";
-             do { scanf("%d",&GIOI_TINH);}
-            while (GIOI_TINH != 0 && GIOI_TINH != 1);
-
-            cout<<"Nhap lai diem mon toan: ";
-            nhap(DIEM_TOAN, (DIEM_TOAN < 0) || (DIEM_TOAN > 10));
-
-            cout<<"Nhap lai diem mon ly: ";
-            nhap(DIEM_LY, (DIEM_LY < 0) || (DIEM_LY > 10));
-
-            cout<<"Nhap lai diem mon hoa: ";
-            nhap(DIEM_HOA, (DIEM_HOA < 0) || (DIEM_HOA > 10));
-
-            database[i].capNhatThongTinSV(TEN, TUOI, GIOI_TINH, DIEM_TOAN, DIEM_LY, DIEM_HOA);
-            break;
-        }
-        else{
-            printf("\n Sinh vien co ID = %d khong ton tai.", id);
-        }
-    }
-}
-////////////////////////////////////////////////////////////////////////////////////////////////
-int xoaSinhVienID(vector<SinhVien> &database, int id){
-
-    int found = 0;
-    for(int i = 0; i < database.size(); i++){
-        if (database[i].getID() == id){
-            found = 1;
-            database.erase(database.begin() + i);
-            cout << "\n Da xoa SV co ID = " << id;
-            break;;
-        }
-    }
-    if (found == 0) {
-        printf("\n Sinh vien co ID = %d khong ton tai.", id);
-        return 0;
-    }else {
-        return 1;
-    }
-}
-////////////////////////////////////////////////////////////////////////////////////////////////
-int timKiemTheoTenSV(vector<SinhVien> &database, string ten){
-    
-    for(int i = 0; i < database.size(); i++){
-        if (database[i].getTen() == ten){
-            cout <<"\nSTT\tID\tTen\tGioi tinh\tTuoi\tToan\tLy\tHoa\tDiem TB\tHoc luc";
-            printf("\n %d", i + 1);
-            printf("\t%d", database[i].getID());
-            printf("\t%s", database[i].getTen());
-            printf("\t\t%s", database[i].getGioiTinh());
-            printf("\t\t%d", database[i].getTuoi());
-            printf("\t%.2f\t%.2f\t%.2f", database[i].getDiemToan(), database[i].getDiemLy(), database[i].getDiemHoa());
-            printf("\t%.2f", database[i].getDTB());
-            printf("\t%s", database[i].getHocLuc());
-            break;;
-        }
-        else{
-            printf("\n Sinh vien co TEN = %s khong ton tai.", ten);
-        }
-    }
-}
-////////////////////////////////////////////////////////////////////////////////////////////////
-void showStudent(vector<SinhVien> &database){
-    
-    cout <<"\nSTT\tID\tTen\tGioi tinh\tTuoi\tToan\tLy\tHoa\tDiem TB\tHoc luc";
-    for(int i = 0; i < database.size(); i++){
-        // in sinh vien thu i ra man hinh
-        printf("\n %d", i + 1);
-        printf("\t%d", database[i].getID());
-        printf("\t%s", database[i].getTen());
-        printf("\t%s", database[i].getGioiTinh());
-        printf("\t%d", database[i].getTuoi());
-        printf("\t%.2lf\t%.2lf\t%.2lf", database[i].getDiemToan(), database[i].getDiemLy(), database[i].getDiemHoa());
-        printf("\t%.2lf", database[i].getDTB());
-        printf("\t%s", database[i].getHocLuc());
-    }
-}
-////////////////////////////////////////////////////////////////////////////////////////////////
-void sapXepTheoDTB(vector<SinhVien> &database) {
-    //Sap xep theo DTB tang dan
-    vector<SinhVien> tmp;
-    for(int i = 0;i < database.size();i++){
-        for(int j = i+1; j < database.size();j++){
-            if(database[i].getDTB() > database[j].getDTB()){
-                tmp[i] = database[i];
-                database[i] = database[j];
-                database[j] = tmp[i];
-            }
-        }
-    }
-}
-////////////////////////////////////////////////////////////////////////////////////////////////
-////////////////////////////////////////////////////////////////////////////////////////////////
-void sapXepTheoTen(vector<SinhVien> &database) {
-     //Sap xep sinh vien theo ten theo thu tu tang dan
-    vector<SinhVien> tmp;
-    for(int i = 0;i < database.size(); i++) {
-        for(int j = i+1; j <database.size(); j++) {
-            if((database[i].getTen()).compare(database[j].getTen()) > 0) {
-                tmp[i] = database[i];
-                database[i] = database[j];
-                database[j] = tmp[i];
-            }
-        }
-    }
-}
-////////////////////////////////////////////////////////////////////////////////////////////////
-void pressAnyKey() {
-    cout << "\n\nBam phim bat ky de tiep tuc...";
-    getch();
-    system("cls");
-}
-////////////////////////////////////////////////////////////////////////////////////////////////
 int main(int argc, char **argv){
 
     vector<SinhVien> database;
@@ -393,5 +235,167 @@ int main(int argc, char **argv){
      return 0;
 }
 
+ ////////////////////////////////////////////////////////////////////////////////////////////////
+void ThemSinhVien(vector<SinhVien> &database){
+
+    string TEN;
+    int TUOI;
+    TypeGioiTinh GIOI_TINH;
+    double DIEM_TOAN;
+    double DIEM_LY;
+    double DIEM_HOA;
+
+    cout<<"Nhap ten sinh vien: ";
+    nhap(TEN, (TEN.length()<2));
+
+    cout<<"Nhap tuoi sinh vien: ";
+    nhap(TUOI, (TUOI < 18) || (TUOI > 25));
+
+    cout<<"Nhap gioi tinh sinh vien: ";
+    do { scanf("%d",&GIOI_TINH);}
+    while (GIOI_TINH != 0 && GIOI_TINH != 1);
+
+    cout<<"Nhap diem mon toan: ";
+    nhap(DIEM_TOAN, (DIEM_TOAN < 0) || (DIEM_TOAN > 10));
+
+    cout<<"Nhap diem mon ly: ";
+    nhap(DIEM_LY, (DIEM_LY < 0) || (DIEM_LY > 10));
+
+    cout<<"Nhap diem mon hoa: ";
+    nhap(DIEM_HOA, (DIEM_HOA < 0) || (DIEM_HOA > 10));
+
+    SinhVien sv(TEN, TUOI, GIOI_TINH, DIEM_TOAN, DIEM_LY, DIEM_HOA);
     
+    database.push_back(sv);
+}
+////////////////////////////////////////////////////////////////////////////////////////////////
+void capNhatSV(vector<SinhVien> &database, int id) {
+    
+    string TEN;
+    int TUOI;
+    TypeGioiTinh GIOI_TINH;
+    double DIEM_TOAN;
+    double DIEM_LY;
+    double DIEM_HOA;
+
+    for(int i = 0; i < database.size(); i++){
+        if (database[i].getID() == id) {
+            cout<<"Nhap lai ten sinh vien: ";
+            nhap(TEN, TEN.length()<1);
+
+            cout<<"Nhap lai tuoi sinh vien: ";
+            nhap(TUOI, (TUOI < 18) || (TUOI > 25));
+
+            cout<<"Nhap lai gioi tinh sinh vien: ";
+             do { scanf("%d",&GIOI_TINH);}
+            while (GIOI_TINH != 0 && GIOI_TINH != 1);
+
+            cout<<"Nhap lai diem mon toan: ";
+            nhap(DIEM_TOAN, (DIEM_TOAN < 0) || (DIEM_TOAN > 10));
+
+            cout<<"Nhap lai diem mon ly: ";
+            nhap(DIEM_LY, (DIEM_LY < 0) || (DIEM_LY > 10));
+
+            cout<<"Nhap lai diem mon hoa: ";
+            nhap(DIEM_HOA, (DIEM_HOA < 0) || (DIEM_HOA > 10));
+
+            database[i].capNhatThongTinSV(TEN, TUOI, GIOI_TINH, DIEM_TOAN, DIEM_LY, DIEM_HOA);
+            break;
+        }
+        else{
+            printf("\n Sinh vien co ID = %d khong ton tai.", id);
+        }
+    }
+}
+////////////////////////////////////////////////////////////////////////////////////////////////
+int xoaSinhVienID(vector<SinhVien> &database, int id){
+
+    int found = 0;
+    for(int i = 0; i < database.size(); i++){
+        if (database[i].getID() == id){
+            found = 1;
+            database.erase(database.begin() + i);
+            cout << "\n Da xoa SV co ID = " << id;
+            break;;
+        }
+    }
+    if (found == 0) {
+        printf("\n Sinh vien co ID = %d khong ton tai.", id);
+        return 0;
+    }else {
+        return 1;
+    }
+}
+////////////////////////////////////////////////////////////////////////////////////////////////
+void timKiemTheoTenSV(vector<SinhVien> &database, string ten){
+    
+    for(int i = 0; i < database.size(); i++){
+        if (database[i].getTen() == ten){
+            cout <<"\nSTT\tID\tTen\tGioi tinh\tTuoi\tToan\tLy\tHoa\tDiem TB\t\tHoc luc";
+            printf("\n %d", i + 1);
+            printf("\t%d", database[i].getID());
+            cout<<"    "<<database[i].getTen();
+            printf("\t\t%d", database[i].getGioiTinh());
+            printf("\t%d", database[i].getTuoi());
+            printf("\t%.2lf\t%.2lf\t%.2lf", database[i].getDiemToan(), database[i].getDiemLy(), database[i].getDiemHoa());
+            printf("\t%.2lf", database[i].getDTB());
+            printf("\t\t%d", database[i].getHocLuc());
+        }
+        else{
+            printf("\n Sinh vien co TEN = %s khong ton tai.", ten);
+        }
+    }
+}
+////////////////////////////////////////////////////////////////////////////////////////////////
+void showStudent(vector<SinhVien> &database){
+    
+    cout <<"\nSTT\tID\tTen\tGioi tinh\tTuoi\tToan\tLy\tHoa\tDiem TB\t\tHoc luc";
+    for(int i = 0; i < database.size(); i++){
+        // in sinh vien thu i ra man hinh
+        printf("\n %d", i + 1);
+        printf("\t%d", database[i].getID());
+        cout<<"    "<<database[i].getTen();
+        printf("\t\t%d", database[i].getGioiTinh());
+        printf("\t%d", database[i].getTuoi());
+        printf("\t%.2lf\t%.2lf\t%.2lf", database[i].getDiemToan(), database[i].getDiemLy(), database[i].getDiemHoa());
+        printf("\t%.2lf", database[i].getDTB());
+        printf("\t\t%d", database[i].getHocLuc());
+    }
+}
+////////////////////////////////////////////////////////////////////////////////////////////////
+void sapXepTheoDTB(vector<SinhVien> &database) {
+    //Sap xep theo DTB tang dan
+    vector<SinhVien> tmp;
+    for(int i = 0;i < database.size();i++){
+        for(int j = i+1; j < database.size();j++){
+            if(database[i].getDTB() > database[j].getDTB()){
+                tmp[i] = database[i];
+                database[i] = database[j];
+                database[j] = tmp[i];
+            }
+        }
+    }
+}
+////////////////////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////////////////////
+void sapXepTheoTen(vector<SinhVien> &database) {
+     //Sap xep sinh vien theo ten theo thu tu tang dan
+    vector<SinhVien> tmp;
+    for(int i = 0;i < database.size(); i++) {
+        for(int j = i+1; j <database.size(); j++) {
+            if((database[i].getTen()).compare(database[j].getTen()) > 0) {
+                tmp[i] = database[i];
+                database[i] = database[j];
+                database[j] = tmp[i];
+            }
+        }
+    }
+}
+////////////////////////////////////////////////////////////////////////////////////////////////
+void pressAnyKey() {
+    cout << "\n\nBam phim bat ky de tiep tuc...";
+    getch();
+    system("cls");
+}
+////////////////////////////////////////////////////////////////////////////////////////////////   
    
