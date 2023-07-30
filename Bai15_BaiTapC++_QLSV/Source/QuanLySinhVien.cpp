@@ -333,7 +333,7 @@ void pressAnyKey() {
 * Output:
 *   returns the comparing result of two string.
 */
-bool isCompareResult(string arr1, string arr2)
+int isCompareResult(string arr1, string arr2)
 {
 
     int i=0;

@@ -118,7 +118,7 @@ void sapXepTheoDTB(list<SinhVien> &database);
 void sapXepTheoTen(list<SinhVien> &database);
 void showStudent(list<SinhVien> &database);
 void pressAnyKey();
-bool isCompareResult(string arr1, string arr2);
+int isCompareResult(string arr1, string arr2);
 int LengthString(string arr);
 
 
