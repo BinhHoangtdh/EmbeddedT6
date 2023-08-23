@@ -39,6 +39,9 @@ class DCMotor{
         void setVoltage(float Voltage){
             voltage = Voltage;
         }
+        void setCurrent(float Current){
+            current_max = Current;
+        }
         float getCurrent(){
             return current_max;
         }
@@ -46,50 +49,81 @@ class DCMotor{
 
 class FeedbackSystem{
     private:
-        float temperature = 45;
+        float temperature;
         DCMotor motor;
     public:
         bool overloadDetected(){
-            if( motor.getCurrent() > 5) cerr<<"Alarm: Motor overloading";
-            return true;
+            if( motor.getCurrent() > 5) {
+                cerr<<"\nAlarm: Motor overloading";
+                return true;
+            }
+            return false;
         }
         bool overheatDetected(){
-            if( temperature > 45) cerr<<"Alarm: Motor overheating";
-            return true;
+            if( temperature > 45) {
+                cerr<<"\nAlarm: Motor overheating";
+                return true;
+            }
+            return false;
+        }
+        void setTemperature(float Temperature){
+            temperature = Temperature;
+        }
+         DCMotor& getDCMotor(){
+            return motor;
         }
 };
 
 class DCMotorController{
     private:
-        DCMotor motor;
         FeedbackSystem feedback;
     public:
         void controlStopError(){
             if(feedback.overloadDetected()==true || feedback.overheatDetected()==true){
-                motor.stop();
+                feedback.getDCMotor().stop();
             }
         }
         void controlStop(){
-            motor.stop();
+            feedback.getDCMotor().stop();
         }
         void controlStar(){
-            if(feedback.overloadDetected()==false && feedback.overheatDetected()==false){
-                motor.start();
-            }
+            feedback.getDCMotor().start();
         }
         void controlDirection(typeDirection direction){
-            motor.setDirection(direction);
+            feedback.getDCMotor().setDirection(direction);
         }
         void controlSpeed(float speed){
-            motor.setSpeed(speed);
+            feedback.getDCMotor().setSpeed(speed);
+        }
+        FeedbackSystem& getFeedbackSystem(){
+            return feedback;
         }
 };
 
 int main(int argc, char** argv){
     DCMotorController controller;
+    float speed;
+    typeDirection direction;
+    float temperature;
+    float current;
 
-    controller.controlDirection(CLOCKWISE);
-    controller.controlSpeed(100);
+    cout<<"Enter speed of motor: ";
+    cin>>speed;
+
+    cout<<"Enter direction of motor: ";
+    scanf("%d", &direction);
+
+    cout<<"Enter temperature read from sensor: ";
+    cin>> temperature;
+    controller.getFeedbackSystem().setTemperature(temperature);
+
+    cout<<"Enter current read from sensor: ";
+    cin>> current;
+    controller.getFeedbackSystem().getDCMotor().setCurrent(current);
+
+
+    controller.controlDirection(direction);
+    controller.controlSpeed(speed);
 
     controller.controlStar();
     controller.controlStopError();
