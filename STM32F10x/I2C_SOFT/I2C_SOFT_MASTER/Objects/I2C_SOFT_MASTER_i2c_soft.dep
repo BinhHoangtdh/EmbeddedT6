@@ -1,0 +1,120 @@
+Dependencies for Project 'I2C_SOFT_MASTER', Target 'i2c_soft': (DO NOT MODIFY !)
+CompilerVersion: 6140000::V6.14::ARMCLANG
+F (.\main.c)(0x64EF9163)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m3 -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-gdwarf-3 -O1 -ffunction-sections -Weverything -Wno-packed -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -I./RTE/Device/STM32F103C8-I./RTE/_i2c_soft-ID:/keilC_V5/ARM/CMSIS/5.7.0/CMSIS/Core/Include-ID:/keilC_V5/Keil/STM32F1xx_DFP/2.4.0/Device/Include-ID:/keilC_V5/Keil/STM32F1xx_DFP/2.4.0/Device/StdPeriph_Driver/inc-D__UVISION_VERSION="531" -D_RTE_ -DSTM32F10X_MD -D_RTE_-o ./objects/main.o -MD)
+I (D:\keilC_V5\Keil\STM32F1xx_DFP\2.4.0\Device\Include\stm32f10x.h)(0x61AD876E)
+I (RTE\_i2c_soft\RTE_Components.h)(0x64EF6951)
+I (D:\keilC_V5\ARM\CMSIS\5.7.0\CMSIS\Core\Include\core_cm3.h)(0x5E8EDF32)
+I (D:\keilC_V5\ARM\ARMCLANG\include\stdint.h)(0x5ED619F4)
+I (D:\keilC_V5\ARM\CMSIS\5.7.0\CMSIS\Core\Include\cmsis_version.h)(0x5E8EDF32)
+I (D:\keilC_V5\ARM\CMSIS\5.7.0\CMSIS\Core\Include\cmsis_compiler.h)(0x5E8314D2)
+I (D:\keilC_V5\ARM\CMSIS\5.7.0\CMSIS\Core\Include\cmsis_armclang.h)(0x5E8EDF32)
+I (D:\keilC_V5\ARM\ARMCLANG\include\arm_compat.h)(0x5E0CD0FC)
+I (D:\keilC_V5\ARM\ARMCLANG\include\arm_acle.h)(0x5E0CD128)
+I (D:\keilC_V5\Keil\STM32F1xx_DFP\2.4.0\Device\Include\system_stm32f10x.h)(0x61AD876E)
+I (RTE\Device\STM32F103C8\stm32f10x_conf.h)(0x61AD876E)
+I (D:\keilC_V5\Keil\STM32F1xx_DFP\2.4.0\Device\StdPeriph_Driver\inc\stm32f10x_gpio.h)(0x61AD876E)
+I (D:\keilC_V5\Keil\STM32F1xx_DFP\2.4.0\Device\StdPeriph_Driver\inc\stm32f10x_rcc.h)(0x61AD876E)
+I (D:\keilC_V5\Keil\STM32F1xx_DFP\2.4.0\Device\StdPeriph_Driver\inc\stm32f10x_tim.h)(0x61AD876E)
+I (D:\keilC_V5\Keil\STM32F1xx_DFP\2.4.0\Device\StdPeriph_Driver\inc\misc.h)(0x61AD876E)
+I (i2c_soft_master.h)(0x64EF8E59)
+F (.\i2c_soft_master.c)(0x64F1D125)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m3 -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-gdwarf-3 -O1 -ffunction-sections -Weverything -Wno-packed -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -I./RTE/Device/STM32F103C8-I./RTE/_i2c_soft-ID:/keilC_V5/ARM/CMSIS/5.7.0/CMSIS/Core/Include-ID:/keilC_V5/Keil/STM32F1xx_DFP/2.4.0/Device/Include-ID:/keilC_V5/Keil/STM32F1xx_DFP/2.4.0/Device/StdPeriph_Driver/inc-D__UVISION_VERSION="531" -D_RTE_ -DSTM32F10X_MD -D_RTE_-o ./objects/i2c_soft_master.o -MD)
+I (i2c_soft_master.h)(0x64EF8E59)
+I (D:\keilC_V5\Keil\STM32F1xx_DFP\2.4.0\Device\Include\stm32f10x.h)(0x61AD876E)
+I (RTE\_i2c_soft\RTE_Components.h)(0x64EF6951)
+I (D:\keilC_V5\ARM\CMSIS\5.7.0\CMSIS\Core\Include\core_cm3.h)(0x5E8EDF32)
+I (D:\keilC_V5\ARM\ARMCLANG\include\stdint.h)(0x5ED619F4)
+I (D:\keilC_V5\ARM\CMSIS\5.7.0\CMSIS\Core\Include\cmsis_version.h)(0x5E8EDF32)
+I (D:\keilC_V5\ARM\CMSIS\5.7.0\CMSIS\Core\Include\cmsis_compiler.h)(0x5E8314D2)
+I (D:\keilC_V5\ARM\CMSIS\5.7.0\CMSIS\Core\Include\cmsis_armclang.h)(0x5E8EDF32)
+I (D:\keilC_V5\ARM\ARMCLANG\include\arm_compat.h)(0x5E0CD0FC)
+I (D:\keilC_V5\ARM\ARMCLANG\include\arm_acle.h)(0x5E0CD128)
+I (D:\keilC_V5\Keil\STM32F1xx_DFP\2.4.0\Device\Include\system_stm32f10x.h)(0x61AD876E)
+I (RTE\Device\STM32F103C8\stm32f10x_conf.h)(0x61AD876E)
+I (D:\keilC_V5\Keil\STM32F1xx_DFP\2.4.0\Device\StdPeriph_Driver\inc\stm32f10x_gpio.h)(0x61AD876E)
+I (D:\keilC_V5\Keil\STM32F1xx_DFP\2.4.0\Device\StdPeriph_Driver\inc\stm32f10x_rcc.h)(0x61AD876E)
+I (D:\keilC_V5\Keil\STM32F1xx_DFP\2.4.0\Device\StdPeriph_Driver\inc\stm32f10x_tim.h)(0x61AD876E)
+I (D:\keilC_V5\Keil\STM32F1xx_DFP\2.4.0\Device\StdPeriph_Driver\inc\misc.h)(0x61AD876E)
+F (.\i2c_soft_master.h)(0x64EF8E59)()
+F (D:\keilC_V5\Keil\STM32F1xx_DFP\2.4.0\Device\StdPeriph_Driver\src\misc.c)(0x61AD876E)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m3 -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-gdwarf-3 -O1 -ffunction-sections -Weverything -Wno-packed -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -I./RTE/Device/STM32F103C8-I./RTE/_i2c_soft-ID:/keilC_V5/ARM/CMSIS/5.7.0/CMSIS/Core/Include-ID:/keilC_V5/Keil/STM32F1xx_DFP/2.4.0/Device/Include-ID:/keilC_V5/Keil/STM32F1xx_DFP/2.4.0/Device/StdPeriph_Driver/inc-D__UVISION_VERSION="531" -D_RTE_ -DSTM32F10X_MD -D_RTE_-o ./objects/misc.o -MD)
+I (D:\keilC_V5\Keil\STM32F1xx_DFP\2.4.0\Device\StdPeriph_Driver\inc\misc.h)(0x61AD876E)
+I (D:\keilC_V5\Keil\STM32F1xx_DFP\2.4.0\Device\Include\stm32f10x.h)(0x61AD876E)
+I (RTE\_i2c_soft\RTE_Components.h)(0x64EF6951)
+I (D:\keilC_V5\ARM\CMSIS\5.7.0\CMSIS\Core\Include\core_cm3.h)(0x5E8EDF32)
+I (D:\keilC_V5\ARM\ARMCLANG\include\stdint.h)(0x5ED619F4)
+I (D:\keilC_V5\ARM\CMSIS\5.7.0\CMSIS\Core\Include\cmsis_version.h)(0x5E8EDF32)
+I (D:\keilC_V5\ARM\CMSIS\5.7.0\CMSIS\Core\Include\cmsis_compiler.h)(0x5E8314D2)
+I (D:\keilC_V5\ARM\CMSIS\5.7.0\CMSIS\Core\Include\cmsis_armclang.h)(0x5E8EDF32)
+I (D:\keilC_V5\ARM\ARMCLANG\include\arm_compat.h)(0x5E0CD0FC)
+I (D:\keilC_V5\ARM\ARMCLANG\include\arm_acle.h)(0x5E0CD128)
+I (D:\keilC_V5\Keil\STM32F1xx_DFP\2.4.0\Device\Include\system_stm32f10x.h)(0x61AD876E)
+I (RTE\Device\STM32F103C8\stm32f10x_conf.h)(0x61AD876E)
+I (D:\keilC_V5\Keil\STM32F1xx_DFP\2.4.0\Device\StdPeriph_Driver\inc\stm32f10x_gpio.h)(0x61AD876E)
+I (D:\keilC_V5\Keil\STM32F1xx_DFP\2.4.0\Device\StdPeriph_Driver\inc\stm32f10x_rcc.h)(0x61AD876E)
+I (D:\keilC_V5\Keil\STM32F1xx_DFP\2.4.0\Device\StdPeriph_Driver\inc\stm32f10x_tim.h)(0x61AD876E)
+F (D:\keilC_V5\Keil\STM32F1xx_DFP\2.4.0\Device\StdPeriph_Driver\src\stm32f10x_gpio.c)(0x61AD876E)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m3 -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-gdwarf-3 -O1 -ffunction-sections -Weverything -Wno-packed -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -I./RTE/Device/STM32F103C8-I./RTE/_i2c_soft-ID:/keilC_V5/ARM/CMSIS/5.7.0/CMSIS/Core/Include-ID:/keilC_V5/Keil/STM32F1xx_DFP/2.4.0/Device/Include-ID:/keilC_V5/Keil/STM32F1xx_DFP/2.4.0/Device/StdPeriph_Driver/inc-D__UVISION_VERSION="531" -D_RTE_ -DSTM32F10X_MD -D_RTE_-o ./objects/stm32f10x_gpio.o -MD)
+I (D:\keilC_V5\Keil\STM32F1xx_DFP\2.4.0\Device\StdPeriph_Driver\inc\stm32f10x_gpio.h)(0x61AD876E)
+I (D:\keilC_V5\Keil\STM32F1xx_DFP\2.4.0\Device\Include\stm32f10x.h)(0x61AD876E)
+I (RTE\_i2c_soft\RTE_Components.h)(0x64EF6951)
+I (D:\keilC_V5\ARM\CMSIS\5.7.0\CMSIS\Core\Include\core_cm3.h)(0x5E8EDF32)
+I (D:\keilC_V5\ARM\ARMCLANG\include\stdint.h)(0x5ED619F4)
+I (D:\keilC_V5\ARM\CMSIS\5.7.0\CMSIS\Core\Include\cmsis_version.h)(0x5E8EDF32)
+I (D:\keilC_V5\ARM\CMSIS\5.7.0\CMSIS\Core\Include\cmsis_compiler.h)(0x5E8314D2)
+I (D:\keilC_V5\ARM\CMSIS\5.7.0\CMSIS\Core\Include\cmsis_armclang.h)(0x5E8EDF32)
+I (D:\keilC_V5\ARM\ARMCLANG\include\arm_compat.h)(0x5E0CD0FC)
+I (D:\keilC_V5\ARM\ARMCLANG\include\arm_acle.h)(0x5E0CD128)
+I (D:\keilC_V5\Keil\STM32F1xx_DFP\2.4.0\Device\Include\system_stm32f10x.h)(0x61AD876E)
+I (RTE\Device\STM32F103C8\stm32f10x_conf.h)(0x61AD876E)
+I (D:\keilC_V5\Keil\STM32F1xx_DFP\2.4.0\Device\StdPeriph_Driver\inc\stm32f10x_rcc.h)(0x61AD876E)
+I (D:\keilC_V5\Keil\STM32F1xx_DFP\2.4.0\Device\StdPeriph_Driver\inc\stm32f10x_tim.h)(0x61AD876E)
+I (D:\keilC_V5\Keil\STM32F1xx_DFP\2.4.0\Device\StdPeriph_Driver\inc\misc.h)(0x61AD876E)
+F (D:\keilC_V5\Keil\STM32F1xx_DFP\2.4.0\Device\StdPeriph_Driver\src\stm32f10x_rcc.c)(0x61AD876E)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m3 -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-gdwarf-3 -O1 -ffunction-sections -Weverything -Wno-packed -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -I./RTE/Device/STM32F103C8-I./RTE/_i2c_soft-ID:/keilC_V5/ARM/CMSIS/5.7.0/CMSIS/Core/Include-ID:/keilC_V5/Keil/STM32F1xx_DFP/2.4.0/Device/Include-ID:/keilC_V5/Keil/STM32F1xx_DFP/2.4.0/Device/StdPeriph_Driver/inc-D__UVISION_VERSION="531" -D_RTE_ -DSTM32F10X_MD -D_RTE_-o ./objects/stm32f10x_rcc.o -MD)
+I (D:\keilC_V5\Keil\STM32F1xx_DFP\2.4.0\Device\StdPeriph_Driver\inc\stm32f10x_rcc.h)(0x61AD876E)
+I (D:\keilC_V5\Keil\STM32F1xx_DFP\2.4.0\Device\Include\stm32f10x.h)(0x61AD876E)
+I (RTE\_i2c_soft\RTE_Components.h)(0x64EF6951)
+I (D:\keilC_V5\ARM\CMSIS\5.7.0\CMSIS\Core\Include\core_cm3.h)(0x5E8EDF32)
+I (D:\keilC_V5\ARM\ARMCLANG\include\stdint.h)(0x5ED619F4)
+I (D:\keilC_V5\ARM\CMSIS\5.7.0\CMSIS\Core\Include\cmsis_version.h)(0x5E8EDF32)
+I (D:\keilC_V5\ARM\CMSIS\5.7.0\CMSIS\Core\Include\cmsis_compiler.h)(0x5E8314D2)
+I (D:\keilC_V5\ARM\CMSIS\5.7.0\CMSIS\Core\Include\cmsis_armclang.h)(0x5E8EDF32)
+I (D:\keilC_V5\ARM\ARMCLANG\include\arm_compat.h)(0x5E0CD0FC)
+I (D:\keilC_V5\ARM\ARMCLANG\include\arm_acle.h)(0x5E0CD128)
+I (D:\keilC_V5\Keil\STM32F1xx_DFP\2.4.0\Device\Include\system_stm32f10x.h)(0x61AD876E)
+I (RTE\Device\STM32F103C8\stm32f10x_conf.h)(0x61AD876E)
+I (D:\keilC_V5\Keil\STM32F1xx_DFP\2.4.0\Device\StdPeriph_Driver\inc\stm32f10x_gpio.h)(0x61AD876E)
+I (D:\keilC_V5\Keil\STM32F1xx_DFP\2.4.0\Device\StdPeriph_Driver\inc\stm32f10x_tim.h)(0x61AD876E)
+I (D:\keilC_V5\Keil\STM32F1xx_DFP\2.4.0\Device\StdPeriph_Driver\inc\misc.h)(0x61AD876E)
+F (D:\keilC_V5\Keil\STM32F1xx_DFP\2.4.0\Device\StdPeriph_Driver\src\stm32f10x_tim.c)(0x61AD876E)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m3 -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-gdwarf-3 -O1 -ffunction-sections -Weverything -Wno-packed -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -I./RTE/Device/STM32F103C8-I./RTE/_i2c_soft-ID:/keilC_V5/ARM/CMSIS/5.7.0/CMSIS/Core/Include-ID:/keilC_V5/Keil/STM32F1xx_DFP/2.4.0/Device/Include-ID:/keilC_V5/Keil/STM32F1xx_DFP/2.4.0/Device/StdPeriph_Driver/inc-D__UVISION_VERSION="531" -D_RTE_ -DSTM32F10X_MD -D_RTE_-o ./objects/stm32f10x_tim.o -MD)
+I (D:\keilC_V5\Keil\STM32F1xx_DFP\2.4.0\Device\StdPeriph_Driver\inc\stm32f10x_tim.h)(0x61AD876E)
+I (D:\keilC_V5\Keil\STM32F1xx_DFP\2.4.0\Device\Include\stm32f10x.h)(0x61AD876E)
+I (RTE\_i2c_soft\RTE_Components.h)(0x64EF6951)
+I (D:\keilC_V5\ARM\CMSIS\5.7.0\CMSIS\Core\Include\core_cm3.h)(0x5E8EDF32)
+I (D:\keilC_V5\ARM\ARMCLANG\include\stdint.h)(0x5ED619F4)
+I (D:\keilC_V5\ARM\CMSIS\5.7.0\CMSIS\Core\Include\cmsis_version.h)(0x5E8EDF32)
+I (D:\keilC_V5\ARM\CMSIS\5.7.0\CMSIS\Core\Include\cmsis_compiler.h)(0x5E8314D2)
+I (D:\keilC_V5\ARM\CMSIS\5.7.0\CMSIS\Core\Include\cmsis_armclang.h)(0x5E8EDF32)
+I (D:\keilC_V5\ARM\ARMCLANG\include\arm_compat.h)(0x5E0CD0FC)
+I (D:\keilC_V5\ARM\ARMCLANG\include\arm_acle.h)(0x5E0CD128)
+I (D:\keilC_V5\Keil\STM32F1xx_DFP\2.4.0\Device\Include\system_stm32f10x.h)(0x61AD876E)
+I (RTE\Device\STM32F103C8\stm32f10x_conf.h)(0x61AD876E)
+I (D:\keilC_V5\Keil\STM32F1xx_DFP\2.4.0\Device\StdPeriph_Driver\inc\stm32f10x_gpio.h)(0x61AD876E)
+I (D:\keilC_V5\Keil\STM32F1xx_DFP\2.4.0\Device\StdPeriph_Driver\inc\stm32f10x_rcc.h)(0x61AD876E)
+I (D:\keilC_V5\Keil\STM32F1xx_DFP\2.4.0\Device\StdPeriph_Driver\inc\misc.h)(0x61AD876E)
+F (RTE\Device\STM32F103C8\RTE_Device.h)(0x5FC05DFA)()
+F (RTE\Device\STM32F103C8\startup_stm32f10x_md.s)(0x61AD876E)(--target=arm-arm-none-eabi -mcpu=cortex-m3 -masm=auto -c-gdwarf-3-I./RTE/Device/STM32F103C8-I./RTE/_i2c_soft-ID:/keilC_V5/ARM/CMSIS/5.7.0/CMSIS/Core/Include-ID:/keilC_V5/Keil/STM32F1xx_DFP/2.4.0/Device/Include-ID:/keilC_V5/Keil/STM32F1xx_DFP/2.4.0/Device/StdPeriph_Driver/inc-Wa,armasm,--pd,"__UVISION_VERSION SETA 531" -Wa,armasm,--pd,"_RTE_ SETA 1" -Wa,armasm,--pd,"STM32F10X_MD SETA 1" -Wa,armasm,--pd,"_RTE_ SETA 1"-o ./objects/startup_stm32f10x_md.o)
+F (RTE\Device\STM32F103C8\stm32f10x_conf.h)(0x61AD876E)()
+F (RTE\Device\STM32F103C8\system_stm32f10x.c)(0x61AD876E)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m3 -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-gdwarf-3 -O1 -ffunction-sections -Weverything -Wno-packed -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -I./RTE/Device/STM32F103C8-I./RTE/_i2c_soft-ID:/keilC_V5/ARM/CMSIS/5.7.0/CMSIS/Core/Include-ID:/keilC_V5/Keil/STM32F1xx_DFP/2.4.0/Device/Include-ID:/keilC_V5/Keil/STM32F1xx_DFP/2.4.0/Device/StdPeriph_Driver/inc-D__UVISION_VERSION="531" -D_RTE_ -DSTM32F10X_MD -D_RTE_-o ./objects/system_stm32f10x.o -MD)
+I (D:\keilC_V5\Keil\STM32F1xx_DFP\2.4.0\Device\Include\stm32f10x.h)(0x61AD876E)
+I (RTE\_i2c_soft\RTE_Components.h)(0x64EF6951)
+I (D:\keilC_V5\ARM\CMSIS\5.7.0\CMSIS\Core\Include\core_cm3.h)(0x5E8EDF32)
+I (D:\keilC_V5\ARM\ARMCLANG\include\stdint.h)(0x5ED619F4)
+I (D:\keilC_V5\ARM\CMSIS\5.7.0\CMSIS\Core\Include\cmsis_version.h)(0x5E8EDF32)
+I (D:\keilC_V5\ARM\CMSIS\5.7.0\CMSIS\Core\Include\cmsis_compiler.h)(0x5E8314D2)
+I (D:\keilC_V5\ARM\CMSIS\5.7.0\CMSIS\Core\Include\cmsis_armclang.h)(0x5E8EDF32)
+I (D:\keilC_V5\ARM\ARMCLANG\include\arm_compat.h)(0x5E0CD0FC)
+I (D:\keilC_V5\ARM\ARMCLANG\include\arm_acle.h)(0x5E0CD128)
+I (D:\keilC_V5\Keil\STM32F1xx_DFP\2.4.0\Device\Include\system_stm32f10x.h)(0x61AD876E)
+I (RTE\Device\STM32F103C8\stm32f10x_conf.h)(0x61AD876E)
+I (D:\keilC_V5\Keil\STM32F1xx_DFP\2.4.0\Device\StdPeriph_Driver\inc\stm32f10x_gpio.h)(0x61AD876E)
+I (D:\keilC_V5\Keil\STM32F1xx_DFP\2.4.0\Device\StdPeriph_Driver\inc\stm32f10x_rcc.h)(0x61AD876E)
+I (D:\keilC_V5\Keil\STM32F1xx_DFP\2.4.0\Device\StdPeriph_Driver\inc\stm32f10x_tim.h)(0x61AD876E)
+I (D:\keilC_V5\Keil\STM32F1xx_DFP\2.4.0\Device\StdPeriph_Driver\inc\misc.h)(0x61AD876E)
